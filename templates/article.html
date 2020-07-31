@@ -209,6 +209,7 @@
                 {% endif %}
 
                 {% if COMMENTO_URL and article.status != "draft" %}
+                <h4>Comments</h4>
                 <script defer src="{{ COMMENTO_URL }}"></script>
                 <div id="commento"></div>
                 {% endif %}
