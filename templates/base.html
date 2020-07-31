@@ -109,13 +109,13 @@
             {% if SHOW_CREDITS and SHOW_CREDITS.left %}
               {% set left=SHOW_CREDITS.left %}
             {% else %}
-              {% set left='Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a>' %}
+              {% set left='Theme: <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a>' %}
             {% endif %}
 
             {% if SHOW_CREDITS and SHOW_CREDITS.right %}
               {% set right=SHOW_CREDITS.right %}
             {% else %}
-              {% set right='Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a>' %}
+              {% set right='Powered by <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a> and <a href="https://commentio.io" rel="nofollow">Commento</a>' %}
             {% endif %}
 
           <span class="credits-theme">{{left}}</span>
