@@ -129,10 +129,10 @@ jQuery(function($) {
 	codestyling();
 
 	/* ==========================================================================
-	   Initialize and load Disqus
+	   Comments
 	   ========================================================================== */
 
-	if (typeof disqus === 'undefined') {
+	if (typeof disqus === 'undefined' && $("#commento").length === 0) {
 		$('.post-comments').css({
 			'display' : 'none'
 		});

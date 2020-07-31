@@ -210,8 +210,12 @@
 
                 {% if COMMENTO_URL and article.status != "draft" %}
                 <h4>Comments</h4>
-                <script defer src="{{ COMMENTO_URL }}"></script>
-                <div id="commento"></div>
+                <noscript>Please enable JavaScript to view the comments.</noscript>
+                <section class="post-comments">
+                    <script defer src="{{ COMMENTO_URL }}"></script>
+                    <a id="commento-loading">Loading comments...</a>
+                    <div id="commento"></div>
+                </section>
                 {% endif %}
 
                 <aside class="post-nav">
