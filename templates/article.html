@@ -208,6 +208,11 @@
                 </section>
                 {% endif %}
 
+                {% if COMMENTO_URL and article.status != "draft" %}
+                <script defer src="{{ COMMENTO_URL }}"></script>
+                <div id="commento"></div>
+                {% endif %}
+
                 <aside class="post-nav">
                     {% if article.next_article %}
                     <a class="post-nav-next" href="{{ SITEURL }}/{{ article.next_article.url}}">
