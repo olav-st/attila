@@ -1603,7 +1603,6 @@ img {
 .post-comments {
     position: relative;
     padding: 2em 0;
-    text-align: center;
     border-bottom: 1px solid #e5e4e1;
     box-sizing: border-box
 }
