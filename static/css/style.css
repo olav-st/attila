@@ -1604,7 +1604,8 @@ img {
     position: relative;
     padding: 2em 0;
     border-bottom: 1px solid #e5e4e1;
-    box-sizing: border-box
+    box-sizing: border-box;
+    min-height: 17.75em
 }
 
 .post-comments.activated {
@@ -1948,16 +1949,17 @@ img {
 
 .commento-logo-container
 {
-    display: none;
+    display: none
 }
 #commento
 {
     position: relative;
-    background-color: white;
+    background-color: white
 }
 
 #commento-loading
 {
     display: block;
     height:0px;
+    text-align: center;
 }
