@@ -1960,6 +1960,11 @@ img {
 #commento-loading
 {
     display: block;
-    height:0px;
-    text-align: center;
+    height: 0px;
+    text-align: center
+}
+
+.commento-root-min-height
+{
+    min-height: 0px !important
 }
