@@ -1225,11 +1225,11 @@ button,input,select,textarea {
 
 .blog-header {
     position: relative;
-    padding-top: calc(16rem + 4vw)
+    padding-top: calc(2rem + 8vw);
 }
 
 .blog-header.has-cover {
-    padding-top: calc(24rem + 8vw);
+    padding-top: calc(2rem + 8vw);
     color: white;
     background: black;
     overflow: hidden;
@@ -2316,11 +2316,11 @@ button,input,select,textarea {
 
 .post-header {
     position: relative;
-    padding: calc(16rem + 4vw) 0 calc(2rem + 2vw)
+    padding: calc(2rem + 4vw) 0 calc(2rem + 2vw)
 }
 
 .post-header.has-cover {
-    padding: calc(16rem + 8vw) 0 calc(4rem + 6vw);
+    padding: calc(2rem + 8vw) 0 calc(2rem + 6vw);
     margin-bottom: calc(4rem + 2vw);
     background: black;
     overflow: hidden;
