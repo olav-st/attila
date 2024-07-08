@@ -102,6 +102,7 @@ jQuery(function($) {
       localStorage.removeItem('attila_theme');
       toggleText.text(toggle.attr('data-system'));
       changeGiscusTheme('system');
+      changeGithubGistsTheme('system');
     }
 
     function dark() {
@@ -109,6 +110,7 @@ jQuery(function($) {
       localStorage.setItem('attila_theme', 'dark');
       toggleText.text(toggle.attr('data-dark'));
       changeGiscusTheme('dark');
+      changeGithubGistsTheme('dark');
     }
 
     function light() {
@@ -116,6 +118,7 @@ jQuery(function($) {
       localStorage.setItem('attila_theme', 'light');
       toggleText.text(toggle.attr('data-light'));
       changeGiscusTheme('light');
+      changeGithubGistsTheme('light');
     }
 
     switch (localStorage.getItem('attila_theme')) {
@@ -165,6 +168,45 @@ function changeGiscusTheme(theme) {
       theme: theme,
     },
   });
+}
+
+const githubGistsDarkModeStyle = `
+@import url('https://cdn.rawgit.com/lonekorean/gist-syntax-themes/d49b91b3/stylesheets/idle-fingers.css');
+body .gist .gist-meta {
+    color: var(--color-content-main);
+    background: #373737;
+}
+body .gist .gist-meta a {
+    color: var(--color-content-main);
+}`;
+
+function changeGithubGistsTheme(theme)
+{
+  if(theme == "system")
+  {
+    if(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches){
+      theme = 'dark';
+    } else {
+      theme = 'light';
+    }
+  }
+
+  const styleId = 'github-gists-style';
+  let styleTag = document.getElementById(styleId);
+
+  if (theme == "dark") {
+    if (!styleTag) {
+      styleTag = document.createElement('style');
+      styleTag.id = styleId;
+      document.head.appendChild(styleTag);
+    }
+
+    styleTag.textContent = githubGistsDarkModeStyle;
+  } else {
+    if (styleTag) {
+      styleTag.remove();
+    }
+  }
 }
 
 // set giscus theme after giscus has been loaded
